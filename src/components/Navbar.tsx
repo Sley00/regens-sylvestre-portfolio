@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -8,9 +9,20 @@ export default function Navbar() {
         {/* NAME */}
         <Link
           href="/"
-          className="text-lg font-bold tracking-tight text-white sm:text-xl"
+          className="flex items-center gap-3 text-base font-bold tracking-tight text-white sm:text-xl"
         >
-          Regens Sley Sylvestre
+          <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-cyan-400/60 shadow-lg shadow-cyan-950/40">
+            <Image
+              src="/images/profile.jpg"
+              alt="Regens Sley Sylvestre"
+              fill
+              className="object-cover object-[50%_24%]"
+              sizes="44px"
+              priority
+            />
+          </span>
+          <span className="hidden sm:inline">Regens Sley Sylvestre</span>
+          <span className="sm:hidden">Regens Sylvestre</span>
         </Link>
 
         {/* DESKTOP MENU */}
